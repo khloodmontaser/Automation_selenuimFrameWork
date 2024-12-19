@@ -22,12 +22,12 @@ public class AddReview extends TestBase{
         addreviewactions = new AddReviewActions(driver);
 
     }
-      public void NavigateToUrl() {homePageActions.navigateToHomePage(url);}
+    public void NavigateToUrl() {homePageActions.navigateToHomePage(url);}
 
     @Test
     public void AddReviewTest() {
 
-      NavigateToUrl();
+        NavigateToUrl();
         String userName = Utilities.generateRandomString(7);
         String email = Utilities.generateRandomString(7) + "@gmail.com";
         String review = Utilities.generateRandomString(100);
@@ -44,4 +44,3 @@ public class AddReview extends TestBase{
 
     }
 }
-
