@@ -7,7 +7,7 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-public class addProducts extends TestBase {
+public class addproducts extends TestBase {
     String url = Config.getProperty("URL");
     AddProductActions  addProductActions;
 
