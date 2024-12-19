@@ -12,7 +12,6 @@ public class TestBase {
     @BeforeMethod
     public void setup() {
         driverManager = new DriverManager();
-        driverManager.initDriver("chrome");
         driver = driverManager.getDriver();
     }
 
