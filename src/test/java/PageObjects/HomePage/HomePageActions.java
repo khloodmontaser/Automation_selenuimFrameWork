@@ -17,4 +17,8 @@ public class HomePageActions extends HomePageElements {
     public void validateHomePageTitleIsDisplayed(){
         assertion.assertElementIsDisplayed(Title);
     }
+    public void clickCartButton() {
+        browserActions.click(cartButton);
+
+    }
 }

@@ -36,14 +36,63 @@ public class CartPageActions extends CartPageElements{
         assertion.assertElementIsDisplayed(MESSAGE_OF_EMPTY_CART);
     }
 
+    public void clickProceedToCheckout() {
+
+        browserActions.click(proceedToCheckoutButton);
+    }
+    // Enter Comment
+    public  void enterComment(String comment) {
+
+        browserActions.type(commentTextArea, comment);
+    }
+
+    // Place Order
+    public  void clickPlaceOrder() {
+        browserActions.click(placeOrderButton);
+    }
+
+    // Enter Payment Details
+    public void enterPaymentDetails(String nameOnCard, String cardNumber, String cvc, String expiryMonth, String expiryYear) {
+        browserActions.type(nameOnCardField, nameOnCard);
+        browserActions.type(cardNumberField, cardNumber);
+        browserActions.type(cvcField, cvc);
+        browserActions.type(expirationMonthField, expiryMonth);
+        browserActions.type(expirationYearField, expiryYear);
+    }
+
+    // Click Pay and Confirm Order
+    public void clickPayAndConfirmOrder() {
+        browserActions.click(payAndConfirmButton);
+    }
+
+    // Verify Success Message
+    public void verifySuccessMessage() {
+
+        assertion.assertElementTextEquals(successMessage, "Your order has been placed successfully!");
+    }
+
+    // Click Download Invoice
+    public void clickDownloadInvoice() {
+        browserActions.click(downloadInvoiceButton);
+
+    }
+
+    // Click Continue Button
+    public void clickContinue() {
+        browserActions.click(continueButton);
+    }
+
+    // Delete Account
+    public void clickDeleteAccount() {
+        browserActions.click(deleteAccountButton);
+    }
 
 
 
 
 
 
-
-        // Remove a product based on product ID law  h3ml dynamic
+    // Remove a product based on product ID law  h3ml dynamic
     /*
         public void removeProductFromCart(String productId) {
             WebElement removeButton = driver.findElement(cartPageElements.getRemoveButton(productId));
