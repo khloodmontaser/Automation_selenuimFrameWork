@@ -93,6 +93,7 @@ public class DownloadInvoice  extends TestBase {
         addProductActions.AddFirstProductToCart();
         //  Click 'Continue Shopping'
         addProductActions.clickContinueShopping();
+        /*                                                        PROBLEM HERE                  */
         navbarActions.clickCartButton();
         // Verify that cart page is displayed
         cartPageActions.validateCarPageIsDisplayed();
