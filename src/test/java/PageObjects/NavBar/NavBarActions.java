@@ -29,5 +29,8 @@ public class NavBarActions extends NavBarElements {
     public void clickProductButton(){
         browserActions.click(PRODUCTS_BUTTON);
     }
+    public void clickDeleteAccountButton(){
+        browserActions.click(DELETE_ACCOUNT_BUTTON);
+    }
 
 }

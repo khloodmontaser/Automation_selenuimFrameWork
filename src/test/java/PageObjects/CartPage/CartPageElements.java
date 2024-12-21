@@ -10,28 +10,44 @@ public class CartPageElements {
     By REMOVE_BUTTON=By.xpath("//a [@data-product-id='1']");
     By MESSAGE_OF_EMPTY_CART=By.xpath("//span[@id='empty_cart']");
     By CART_INFO=By.xpath("//div[@id='cart_info']");
-    By placeOrderButton = By.xpath("//a[contains(text(), 'Place Order')]");
-    By proceedToCheckoutButton = By.xpath("//*[@id=\"do_action\"]/div[1]/div/div/a");
 
 
-    By commentTextArea = By.name("message");
+    //cart page elements when Proceed To Checkout
+    By COMMENT_BOX=By.xpath("//textarea[@class='form-control']");
+    By PLACE_ORDER_BUTTON=By.xpath("//a[@href='/payment']");
+    By PROCEED_TO_CHECKOUT_BUTTON=By.xpath("//div[@class='col-sm-6']/a");
+    By ADDRESS_DETAILS_TITLE=By.xpath("/html/body/section/div/div[2]/h2");
+    By ADDRESS_DETAILS_ROW=By.xpath("//div[@class='checkout-information']");
+    By YOUR_ORDER=By.xpath("//div[@id='cart_info']");
 
-    // Payment Details
-    By nameOnCardField = By.name("name_on_card");
-    By cardNumberField = By.name("card_number");
-    By cvcField = By.name("cvc");
-    By expirationMonthField = By.name("expiry_month");
-    By expirationYearField = By.name("expiry_year");
 
-    By payAndConfirmButton = By.id("submit");
 
-    // Success Message
-    By successMessage = By.xpath("//p[contains(text(), 'Your order has been placed successfully!')]");
-    By downloadInvoiceButton = By.xpath("//a[contains(text(), 'Download Invoice')]");
-    By continueButton = By.xpath("//a[contains(text(), 'Continue')]");
-    By deleteAccountButton = By.xpath("//a[contains(text(), 'Delete Account')]");
 
-    // Success Message
-    By accountDeletedMessage = By.xpath("//h2[contains(text(), 'ACCOUNT DELETED!')]");
+    //checkout window that popout when u try to procedout without signup or login
+
+    By REGISTER_LOGIN_BUTTON=By.xpath("//a[@href='/login']/u");
+
+
+
+
+
+
+
+
+
+    /*
+    //dynamic locator law kont h add aktar mn element bs mafesh message when remove element mn kza haga
+
+
+        // Dynamic locator for a specific product row in the cart
+        public By getProductRow(String productId) {
+            return By.xpath("//tr[@id='product-" + productId + "']");
+        }
+
+        // Dynamic locator for the remove button based on product ID
+        public By getRemoveButton(String productId) {
+            return By.xpath("//a[@data-product-id='" + productId + "']");
+        }*/
+
 
 }

@@ -36,56 +36,52 @@ public class CartPageActions extends CartPageElements{
         assertion.assertElementIsDisplayed(MESSAGE_OF_EMPTY_CART);
     }
 
-    public void clickProceedToCheckout() {
 
-        browserActions.click(proceedToCheckoutButton);
-    }
-    // Enter Comment
-    public  void enterComment(String comment) {
 
-        browserActions.type(commentTextArea, comment);
+    // VLIDATE THAT ADDRESS TITLE IS DISPLYED
+    public void validateAddressTitleIsDisplayed() {
+        assertion.assertElementIsDisplayed(ADDRESS_DETAILS_TITLE);
     }
 
-    // Place Order
-    public  void clickPlaceOrder() {
-        browserActions.click(placeOrderButton);
+
+    // VLIDATE THAT ADDRESS DETAILS IS DISPLYED
+    public void validateAddressDetailsIsDisplayed() {
+        assertion.assertElementIsDisplayed(ADDRESS_DETAILS_ROW);
     }
 
-    // Enter Payment Details
-    public void enterPaymentDetails(String nameOnCard, String cardNumber, String cvc, String expiryMonth, String expiryYear) {
-        browserActions.type(nameOnCardField, nameOnCard);
-        browserActions.type(cardNumberField, cardNumber);
-        browserActions.type(cvcField, cvc);
-        browserActions.type(expirationMonthField, expiryMonth);
-        browserActions.type(expirationYearField, expiryYear);
+    // validate THAT YOUR_ORDER
+    public void validateOrderIsDisplayed() {
+        assertion.assertElementIsDisplayed(YOUR_ORDER);
     }
 
-    // Click Pay and Confirm Order
-    public void clickPayAndConfirmOrder() {
-        browserActions.click(payAndConfirmButton);
+
+    //validate clickon  PROCEED TO CHECKOUT button
+    public void clickProceedToCheckoutButton() {
+        browserActions.click(PROCEED_TO_CHECKOUT_BUTTON);
     }
 
-    // Verify Success Message
-    public void verifySuccessMessage() {
-
-        assertion.assertElementTextEquals(successMessage, "Your order has been placed successfully!");
+    //VALIDATE CLICKING ON PLACE ORDER BUTTON
+    public void clickPlaceOrderButton() {
+        browserActions.click(PLACE_ORDER_BUTTON);
     }
 
-    // Click Download Invoice
-    public void clickDownloadInvoice() {
-        browserActions.click(downloadInvoiceButton);
 
+
+
+    //enter text in the comment box
+    public void enterComment(String comment) {
+        browserActions.type(COMMENT_BOX, comment);
     }
 
-    // Click Continue Button
-    public void clickContinue() {
-        browserActions.click(continueButton);
+    // click on register_login button in the checkout window
+
+    public void clickRegisterLoginButton() {
+        browserActions.click(REGISTER_LOGIN_BUTTON);
     }
 
-    // Delete Account
-    public void clickDeleteAccount() {
-        browserActions.click(deleteAccountButton);
-    }
+
+
+
 
 
 

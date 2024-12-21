@@ -27,6 +27,7 @@ public class ProductsPageActions extends ProductsPageElements {
     }
 
 
+
     /*public void clickBrandsPoloButton() {
         browserActions.click(BRANDS_POLO);
     }

@@ -12,36 +12,40 @@ public class VerifyProductActions extends VerifyProductElements {
         assertion = new Assertion(driver);
     }
 
-        public void navigateToUrl(String url) {
-            browserActions.navigateToURl(url);
-        }
+    public void navigateToUrl(String url) {
+        browserActions.navigateToURl(url);
+    }
 
-        public boolean isHomePageVisible() {
-            return browserActions.waitUntilElementIsReady(homePageVisibleElement).isDisplayed();
-        }
+    public boolean isHomePageVisible() {
+        return browserActions.waitUntilElementIsReady(homePageVisibleElement).isDisplayed();
+    }
 
-        public void clickViewProduct() {
-            browserActions.click(viewProductButton);
-        }
+    public void clickViewProduct() {
+        browserActions.click(viewProductButton);
+    }
 
-        public boolean isProductDetailOpened() {
-            return browserActions.waitUntilElementIsReady(productDetailPage).isDisplayed();
-        }
+    public boolean isProductDetailOpened() {
+        return browserActions.waitUntilElementIsReady(productDetailPage).isDisplayed();
+    }
 
-        public void setProductQuantity(int quantity) {
-            browserActions.type(quantityInput, String.valueOf(quantity));
-        }
+    public void setProductQuantity(int quantity) {
+        browserActions.type(quantityInput, String.valueOf(quantity));
+    }
 
-        public void clickAddToCart() {
-            browserActions.click(addToCartButton);
-        }
+    public void clickAddToCart() {
+        browserActions.click(addToCartButton);
+    }
 
-        public void clickViewCart() {
-            browserActions.click(viewCartButton);
-        }
+    public void clickViewCart() {
+        browserActions.click(viewCartButton);
+    }
 
-        public String getCartProductQuantity() {
-            return browserActions.getText(cartProductQuantity);
-        }
+    //CLICCKON CONTINUE SHOPPING BUTTON
+    public void clickContinueShoppingButton() {
+        browserActions.click(CONTINUE_SHOPPING_BUTTON);
+    }
+
+    public String getCartProductQuantity() {
+        return browserActions.getText(cartProductQuantity);
+    }
 }
-

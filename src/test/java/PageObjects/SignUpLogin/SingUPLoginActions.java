@@ -73,41 +73,7 @@ public class SingUPLoginActions extends SingUPLoginElements {
     public void checkcontinuebutton (){browserActions.click(Checkcontinuebutton);}
     public void checkuserloginIsDisplayed(){assertion.assertElementIsDisplayed(Checkuserlogin);}
 
-    public void clickRegisterLogin() {
-
-        browserActions.click(registerLoginButton);
-    }
-   /* BrowserActions browserActions;
-    Assertion assertion;
-    WebDriver driver;
-    public SingUPLoginActions(WebDriver driver) {
-        browserActions = new BrowserActions(driver);
-        assertion = new Assertion(driver);
-    }
-
-    public void enterSignUPNameInput(String input) {
-        browserActions.type(SignUPUserNameInput, input);
-    }
-
-    public void enterSignUPEmailInput(String input) {
-        browserActions.type(SignUPEmailInput, input);
-    }
-    public void enterSignUPPassword(String input) {
-        browserActions.type(SignUpPassword, input);
-    }
-
-    public void clickSignUpButton() {
-        browserActions.click(SignUpButton);
-    }
-
-    public void validateNewUserSignUpTitleIsDisplayed() {
-        assertion.assertElementIsDisplayed(NewUserSignUpTitle);
-    }
-    public void clickRegisterLogin() {
-
-        browserActions.click(registerLoginButton);
-    }
 
 
-*/
+
 }
