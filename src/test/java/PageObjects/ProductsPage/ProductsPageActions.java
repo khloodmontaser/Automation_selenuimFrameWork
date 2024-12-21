@@ -23,7 +23,7 @@ public class ProductsPageActions extends ProductsPageElements {
     }
 
     public void validateBrandsIsDisplayed() {
-        assertion.assertElementIsDisplayed(BRANDS_PRODUCT);
+        assertion.assertElementIsDisplayed(BRANDS_TITLE);
     }
 
 

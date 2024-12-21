@@ -5,12 +5,14 @@ import Config.Config;
 import PageObjects.CartPage.CartPageActions;
 import PageObjects.HomePage.HomePageActions;
 import PageObjects.NavBar.NavBarActions;
+import PageObjects.VerifyProductquantityinCart.VerifyProductActions;
 import Tests.TestBase;
 import Utilities.Utilities;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
  /*مفروض ادد  الاول */
 public class RemoveProductsTest extends TestBase{
+     VerifyProductActions verifyProductActions;
 
         HomePageActions homePageActions;
         NavBarActions navBarActions;
@@ -22,6 +24,8 @@ public class RemoveProductsTest extends TestBase{
             homePageActions = new HomePageActions(driver);
             navBarActions = new NavBarActions(driver);
             cartPageActions = new CartPageActions(driver);
+            verifyProductActions = new VerifyProductActions(driver);
+
         }
 
         // Navigate to the application URL
@@ -38,7 +42,9 @@ public class RemoveProductsTest extends TestBase{
             homePageActions.validateHomePageTitleIsDisplayed();
 
             // Step4: Add  product to the cart
-
+            verifyProductActions.clickViewProduct();
+            verifyProductActions.clickAddToCart();
+            verifyProductActions.clickContinueShoppingButton();
 
 
             // Step5: Click 'Cart' button

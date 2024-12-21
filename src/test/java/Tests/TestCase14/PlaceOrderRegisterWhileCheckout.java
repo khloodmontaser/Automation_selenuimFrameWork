@@ -100,6 +100,8 @@ public class PlaceOrderRegisterWhileCheckout extends TestBase
 
 
         signUpLoginActions.selctCountry();
+
+
         signUpLoginActions.fillStatefield(state);
         signUpLoginActions.fillCityfield(city);
         signUpLoginActions.fillZipCodefield(zip);

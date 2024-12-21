@@ -12,6 +12,7 @@ public class ProductsPageElements {
     By ITEM_PRODUCT = By.xpath("//div[@class='features_items']");
 
     //brands in left sidebar
+    By BRANDS_TITLE = By.xpath("/html/body/section[2]/div[1]/div/div[1]/div[1]/div[3]/h2");
     By BRANDS_PRODUCT = By.xpath("//div[@class='brands_products']");
 
     //xpathes of the brands
