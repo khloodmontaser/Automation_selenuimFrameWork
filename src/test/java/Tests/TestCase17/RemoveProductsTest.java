@@ -9,7 +9,7 @@ import Tests.TestBase;
 import Utilities.Utilities;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-
+ /*مفروض ادد  الاول */
 public class RemoveProductsTest extends TestBase{
 
         HomePageActions homePageActions;

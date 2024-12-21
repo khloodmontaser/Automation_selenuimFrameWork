@@ -27,13 +27,13 @@ public class SingUPLoginElements {
     By addressField = By.id("address1");
     By submitButton = By.xpath("//button[text()='Create Account']");
 */
-    By registerLoginButton = By.xpath("//*[@id=\"checkoutModal\"]/div/div/div[2]/p[2]/a/u");
+   // By registerLoginButton = By.xpath("//*[@id=\"checkoutModal\"]/div/div/div[2]/p[2]/a/u");
     By NewUserSignUpTitle=By.xpath("//div[@class='signup-form']/h2");
     By SignUPUserNameInput=By.xpath("//input[@data-qa='signup-name']");
     By SignUPEmailInput=By.xpath("//input[@data-qa='signup-email']");
     By SignUpButton=By.xpath("//button[@data-qa='signup-button']");
 
-    //try dynamic
+
     By ChooseGenderMr =By.xpath("//input[@id='id_gender1']");
     // By ChooseGenderMrs =By.xpath("//input[@id='id_gender2']");
     //

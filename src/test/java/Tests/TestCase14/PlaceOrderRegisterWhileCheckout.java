@@ -11,6 +11,7 @@ import PageObjects.SignUpLogin.SingUPLoginActions;
 import Utilities.Utilities;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+
 public class PlaceOrderRegisterWhileCheckout extends TestBase
 {
     HomePageActions homePageActions;
@@ -89,10 +90,15 @@ public class PlaceOrderRegisterWhileCheckout extends TestBase
         signUpLoginActions.selectDay();
         signUpLoginActions.selectMonth();
         signUpLoginActions.selectYear();
+
+
         signUpLoginActions.fillFirstNamefield(firstname);
         signUpLoginActions.fillLastNamefield(lastname);
         signUpLoginActions.fillCompanyfield(company);
         signUpLoginActions.fillAddressfield(address);
+
+
+
         signUpLoginActions.selctCountry();
         signUpLoginActions.fillStatefield(state);
         signUpLoginActions.fillCityfield(city);
