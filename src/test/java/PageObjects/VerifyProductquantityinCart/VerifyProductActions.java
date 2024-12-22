@@ -45,6 +45,9 @@ public class VerifyProductActions extends VerifyProductElements {
         browserActions.click(CONTINUE_SHOPPING_BUTTON);
     }
 
+
+
+
     public String getCartProductQuantity() {
         return browserActions.getText(cartProductQuantity);
     }

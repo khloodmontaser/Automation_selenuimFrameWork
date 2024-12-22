@@ -33,6 +33,18 @@ public class BrowserActions {
         element.click();
     }
 
+
+    public void scrollTillElement(By locator) {
+            WebElement element = waitUntilElementIsReady(locator); // Wait until the element is present
+            JavascriptExecutor js = (JavascriptExecutor) driver;
+            js.executeScript("arguments[0].scrollIntoView(true);", element); // Scroll to the element
+        }
+    public void scrollToTop() {
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("window.scrollTo(0, 0);"); // Scrolls to the top of the page
+    }
+
+
     public void type(By locator, String text) {
         WebElement element = waitUntilElementIsReady(locator);
         element.click();

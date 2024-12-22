@@ -7,7 +7,7 @@ public class VerifyProductElements {
     By homePageVisibleElement =By.xpath("//div[@id='slider-carousel']//div[@class='carousel-inner']");
 
     // Locators for viewing product
-    By viewProductButton = By.xpath("//a[contains(text(),'View Product')]");
+    By viewProductButton = By.xpath("//a[@href=\"/product_details/1\"]");
     By productDetailPage = By.xpath("//div[@class='product-information']");
 
     // Locators for product actions
@@ -15,9 +15,8 @@ public class VerifyProductElements {
     By addToCartButton = By.xpath("//button[@class='btn btn-default cart']");
     By viewCartButton = By.xpath("//p[@class='text-center']//a[@href='/view_cart']\n");
 
-    // button for continue shopping
-    By CONTINUE_SHOPPING_BUTTON =By.xpath("//div[@class='modal-footer']/button");
-
     // Locators for cart verification
     By cartProductQuantity = By.xpath("//td[@class='cart_quantity']//button");
+    By CONTINUE_SHOPPING_BUTTON = By.xpath("//*[@class=\'btn btn-success close-modal btn-block\']");
 }
+

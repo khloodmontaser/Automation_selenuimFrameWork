@@ -36,10 +36,15 @@ public class SingUPLoginActions extends SingUPLoginElements {
         browserActions.type(UserNewPassword, input);
     }
 
-    public void selectDay() {browserActions.click(SelectDay);}
+    public void selectDay() {
+        browserActions.click(SelectDay);
+    }
 
 
-    public void selectMonth (){browserActions.click(SelectMonth);}
+    public void selectMonth (){
+        browserActions.click(SelectMonth);
+
+    }
     public void selectYear (){browserActions.click(SelectYear);}
     public void fillFirstNamefield(String input) {
         browserActions.type(FillFirstName, input);
@@ -53,7 +58,7 @@ public class SingUPLoginActions extends SingUPLoginElements {
     public void fillAddressfield(String input) {
         browserActions.type(FillAddress, input);
     }
-    public void selctCountry() {browserActions.click(SelctCountry);}
+    public void selctCountry() {browserActions.click(SelectCountry);}
 
     public void fillStatefield(String input) {
         browserActions.type(FillState, input);

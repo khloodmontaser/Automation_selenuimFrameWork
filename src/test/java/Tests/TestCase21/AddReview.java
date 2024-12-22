@@ -44,12 +44,10 @@ public class AddReview extends TestBase{
 
     }
 }
-/*24  (ناقص اخر حتة)
+/*24
+  (ناقص اخر حتة)
 
  19
-
-
- 21
 
 
      19/  12 failed leeeeeeeh heya w 14

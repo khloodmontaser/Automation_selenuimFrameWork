@@ -2,6 +2,8 @@ package Tests.TestCase12;
 
 import Config.Config;
 import PageObjects.AddProductsinCart.AddProductActions;
+import PageObjects.HomePage.HomePageActions;
+import PageObjects.NavBar.NavBarActions;
 import Tests.TestBase;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
@@ -10,10 +12,18 @@ import org.testng.annotations.Test;
 public class addproducts extends TestBase {
     String url = Config.getProperty("URL");
     AddProductActions  addProductActions;
+    HomePageActions homePageActions;
+    NavBarActions navBarActions;
+
+
 
     @BeforeMethod
     public void setupTest() {
         addProductActions = new AddProductActions(driver);
+        homePageActions = new HomePageActions(driver);
+        navBarActions = new NavBarActions(driver);
+
+
 
     }
     @Test
@@ -21,17 +31,25 @@ public class addproducts extends TestBase {
         // Step 1: Launch browser and navigate to URL
         addProductActions.navigateToUrl(url);
         // Step 2: Verify that home page is visible
-        Assert.assertTrue(addProductActions.isHomePageVisible(), "Home page is not visible!");
+        homePageActions.validateHomePageTitleIsDisplayed();
         // Step 3: Click 'Products' button
-        addProductActions.clickProductsButton();
+        navBarActions.clickProductButton();
+
+
         // Step 4: Hover over first product and click 'Add to cart'
         addProductActions.AddFirstProductToCart();
+
+
         // Step 5: Click 'Continue Shopping'
         addProductActions.clickContinueShopping();
+
+
         // Step 6: Hover over second product and click 'Add to cart'
         addProductActions.addSecondProductToCart();
         // Step 7: Click 'View Cart' button
         addProductActions.clickViewCartButton();
+
+
         // Step 8: Verify both products are added to Cart
         Assert.assertTrue(addProductActions.areBothProductsAdded(), "Products are not added to cart!");
         // Step 9: Verify their prices, quantity, and total price

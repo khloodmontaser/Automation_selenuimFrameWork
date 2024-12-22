@@ -21,4 +21,19 @@ public class HomePageActions extends HomePageElements {
         browserActions.click(cartButton);
 
     }
+    public void ScrollToFooter(){
+        browserActions.scrollTillElement(footer);
+    }
+    public void scrollTop(){
+        browserActions.scrollToTop();
+    }
+    public void ValidateSubscriptionTitleDisplayed(){
+        assertion.assertElementIsDisplayed(subscribtion);
+    }
+    public void ClickArrowUpwards(){
+        browserActions.click(ArrowUpward);
+    }
+    public void Fullfledgedtextdisplayed(){
+        assertion.assertElementIsDisplayed(FullfledgedText);
+    }
 }

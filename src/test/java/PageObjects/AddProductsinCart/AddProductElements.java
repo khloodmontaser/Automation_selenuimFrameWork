@@ -9,12 +9,12 @@ public class AddProductElements {
 
     // Locators for first product
     By FirstProduct = By.xpath("//a[@data-product-id='1']");
-    By addToCartFirstProduct  = By.xpath("//a[@data-product-id='1' and contains(@class, 'btn btn-default add-to-cart')]");
+    By addToCartFirstProduct  = By.xpath("/html/body/section[2]/div[1]/div/div[2]/div/div[2]/div/div[1]/div[1]/a");
 
 
     // Locators for second product
     By SecondProduct = By.xpath("//a[@data-product-id='2']");
-    By addToCartSecondProduct   = By.xpath("//a[@data-product-id='2' and contains(@class, 'btn btn-default add-to-cart')]");
+    By addToCartSecondProduct   = By.xpath("/html/body/section[2]/div[1]/div/div[2]/div/div[3]/div/div[1]/div[2]/div/a");
 
     // Locators for navigation
     By productsButton = By.xpath("//a[contains(text(),'Products')]");
