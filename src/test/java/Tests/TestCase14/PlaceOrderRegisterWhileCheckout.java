@@ -9,8 +9,7 @@ import PageObjects.DeleteAccountPage.DeleteAccountActions;
 import PageObjects.PaymentPage.PaymentPageActions;
 import PageObjects.SignUpLogin.SingUPLoginActions;
 import Utilities.Utilities;
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
+
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -67,7 +66,6 @@ public class PlaceOrderRegisterWhileCheckout extends TestBase
 
         homePageActions.validateHomePageTitleIsDisplayed();
         //ADD PRODUCT
-       // driver.findElement(By.xpath("/html/body/section[2]/div[1]/div/div[2]/div/div[2]/div/div[2]/ul/li/a")).click();
         verifyProductActions.clickViewProduct();
         verifyProductActions.clickAddToCart();
         verifyProductActions.clickContinueShoppingButton();
@@ -94,11 +92,6 @@ public class PlaceOrderRegisterWhileCheckout extends TestBase
         signUpLoginActions.selectMonth();
         signUpLoginActions.selectYear();
 
-       // driver.findElement(By.xpath("//input[@id='first_name']")).sendKeys(firstname);
-//      JavascriptExecutor js = (JavascriptExecutor) driver;
-//
-//        js.executeScript(("document.querySelector('#first_name').value = arguments[0];"), firstname);
-//        ((JavascriptExecutor) driver).executeScript(("document.querySelector('##last_name').value = arguments[0];",lastname );
 
 
         signUpLoginActions.fillFirstNamefield(firstname);

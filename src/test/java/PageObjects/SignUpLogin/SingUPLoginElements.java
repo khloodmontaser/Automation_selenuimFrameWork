@@ -18,16 +18,17 @@ public class SingUPLoginElements {
     By SelectYear = By.xpath("//select[@id='years']/option[text()='2003']");
 
     // Address Information
-    By FillFirstName = By.xpath("//input[@data-qa=\"first_name\"");
+    By FillFirstName = By.xpath("//input[@id='first_name']");
+    By FillLastName = By.xpath("//input[@id='last_name']");
+    By FillCompany = By.xpath("//input[@id='company']");
+    By FillAddress = By.xpath("//input[@id='address1']");
 
 
-    By FillLastName = By.xpath("//*[@id='last_name']");
-    By FillCompany = By.xpath("//*[@id=\"company\"]");
-    By FillAddress = By.xpath("//*[@id=\"address1\"]");
     By SelectCountry = By.xpath("//select[@id='country']/option[text()='Canada']");
 
 
-    By FillState = By.xpath("//*[@data-qa=\"state\"]");
+    By FillState = By.xpath("//input[@id='state']");
+
     By FillCity = By.xpath("//*[@name='city']");
     By FillZipCode = By.xpath("//*[@id=\"zipcode\"]");
     By FillMobilePhone = By.xpath("//*[@id=\"mobile_number\"]");
