@@ -16,7 +16,7 @@ public class SingUPLoginElements {
     By SignUPUserNameInput = By.xpath("//input[@data-qa='signup-name']");
     By SignUPEmailInput = By.xpath("//input[@data-qa='signup-email']");
     By SignUpButton = By.xpath("//button[@data-qa='signup-button']");
-
+    By alreadyExistMsg = By.xpath("//p[text()='Email Address already exist!']");
     // Personal Details
     By ChooseGenderMr = By.xpath("//input[@id='id_gender1']");
     By UserNewPassword = By.xpath("//input[@data-qa='password']");

@@ -38,6 +38,9 @@ public class SingUPLoginActions extends SingUPLoginElements {
     public void enterSignUPEmailInput(String input) {
         browserActions.type(SignUPEmailInput, input);
     }
+    public void AlreadyExistMsgDisplayed(){
+        assertion.assertElementIsDisplayed(alreadyExistMsg);
+    }
 
     public void clickSignUpButton() {
         browserActions.click(SignUpButton);
