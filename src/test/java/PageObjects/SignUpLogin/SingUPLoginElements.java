@@ -5,6 +5,13 @@ import org.openqa.selenium.By;
 public class SingUPLoginElements {
 
     // Signup Form Locators
+    By LoginTitle = By.xpath("/html/body/section/div/div/div[1]/div/h2");
+    By login_email = By.xpath("//input[@data-qa='login-email']");
+    By login_password = By.xpath("//input[@data-qa='login-password']");
+    By LoginButton = By.xpath("//button[@data-qa=\"login-button\"]");
+    By InvalidLoginMsg = By.xpath("/html/body/section/div/div/div[1]/div[1]/form/p");
+
+
     By NewUserSignUpTitle = By.xpath("//div[@class='signup-form']/h2");
     By SignUPUserNameInput = By.xpath("//input[@data-qa='signup-name']");
     By SignUPEmailInput = By.xpath("//input[@data-qa='signup-email']");

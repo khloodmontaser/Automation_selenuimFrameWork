@@ -48,7 +48,7 @@ public class PaymentPageActions extends PaymentPageElements {
         browserActions.type(EXPIRY_YEAR, year);
     }
 
-    public void clickPayAndConfirmButton() {
+    public void clickPayAndConfirmButton()  {
         browserActions.click(PAYANDCONFIRM_BUTTON);
     }
 

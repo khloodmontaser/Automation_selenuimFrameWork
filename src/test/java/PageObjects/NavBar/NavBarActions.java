@@ -35,4 +35,8 @@ public class NavBarActions extends NavBarElements {
     public void TestCasesButton(){
         browserActions.click(TC_BUTTON);
     }
+    public void clickLogOut(){
+        browserActions.click(logout_button);
+    }
 }
+

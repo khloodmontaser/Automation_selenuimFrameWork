@@ -36,4 +36,7 @@ public class HomePageActions extends HomePageElements {
     public void Fullfledgedtextdisplayed(){
         assertion.assertElementIsDisplayed(FullfledgedText);
     }
+    public void LoggedUserNameDisplayed(){
+        assertion.assertElementIsDisplayed(UserLogged);
+    }
 }

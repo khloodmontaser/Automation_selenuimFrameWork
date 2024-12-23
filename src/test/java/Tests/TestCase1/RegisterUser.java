@@ -37,5 +37,8 @@ public class RegisterUser extends TestBase {
         singUPLoginActions.enterSignUPNameInput(userName);
         singUPLoginActions.enterSignUPEmailInput(email);
         singUPLoginActions.clickSignUpButton();
+
+
+
     }
 }

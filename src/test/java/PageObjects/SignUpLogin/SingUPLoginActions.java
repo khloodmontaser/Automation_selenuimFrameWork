@@ -12,6 +12,24 @@ public class SingUPLoginActions extends SingUPLoginElements {
         browserActions = new BrowserActions(driver);
         assertion = new Assertion(driver);
     }
+    public void CheckLoginTitle(){
+        assertion.assertElementIsDisplayed(LoginTitle);
+    }
+
+    public void EnterLoginMail(String mail){
+        browserActions.type(login_email, mail);
+    }
+    public void EnterLoginPassword(String pass){
+        browserActions.type(login_password, pass);
+    }
+    public void ClickLogin(){
+        browserActions.click(LoginButton);
+    }
+
+    public void InvalidLoginMsgDisplayed(){
+        assertion.assertElementIsDisplayed(InvalidLoginMsg);
+    }
+
 
     public void enterSignUPNameInput(String input) {
         browserActions.type(SignUPUserNameInput, input);
@@ -47,6 +65,7 @@ public class SingUPLoginActions extends SingUPLoginElements {
     }
     public void selectYear (){browserActions.click(SelectYear);}
     public void fillFirstNamefield(String input) {
+        browserActions.scrollTillElement(FillFirstName);
         browserActions.type(FillFirstName, input);
     }
     public void fillLastNamefield(String input) {
@@ -64,6 +83,7 @@ public class SingUPLoginActions extends SingUPLoginElements {
         browserActions.type(FillState, input);
     }
     public void fillCityfield(String input) {
+        browserActions.scrollTillElement(FillCity);
         browserActions.type(FillCity, input);
     }
     public void fillZipCodefield(String input) {

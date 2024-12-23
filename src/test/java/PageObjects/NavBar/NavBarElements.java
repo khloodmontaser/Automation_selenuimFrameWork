@@ -13,4 +13,5 @@ public class NavBarElements {
     By PRODUCTS_BUTTON = By.xpath("//a[@href='/products']");
     By DELETE_ACCOUNT_BUTTON = By.xpath("//a[@href='/delete_account']");
     By TC_BUTTON = By.xpath("//a[@href='/test_cases']");
+    By logout_button = By.xpath("/html/body/header/div/div/div/div[2]/div/ul/li[4]/a");
 }
