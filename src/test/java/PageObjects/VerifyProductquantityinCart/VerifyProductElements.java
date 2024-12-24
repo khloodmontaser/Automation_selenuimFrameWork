@@ -9,6 +9,7 @@ public class VerifyProductElements {
     // Locators for viewing product
     By viewProductButton = By.xpath(("(//i[@class='fa fa-plus-square'])[1]"));
     By productDetailPage = By.xpath("//div[@class='product-information']");
+    By productDetails = By.xpath("//div[@class='product-information']");
 
     // Locators for product actions
     By quantityInput = By.xpath("//input[@id='quantity']");

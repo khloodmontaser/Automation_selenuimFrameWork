@@ -26,17 +26,9 @@ public class ProductsPageElements {
     By BRAND_Biba = By.xpath("//a[@href='/brand_products/Biba']");
     */
 
-
     public By getBrandLocator(String brandName) {
         return By.xpath("//a[@href='/brand_products/" + brandName + "']");
     }
-
-
-
-
-
-
-
 
 
 }

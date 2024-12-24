@@ -40,15 +40,16 @@ public class VerifyProductActions extends VerifyProductElements {
         browserActions.click(viewCartButton);
     }
 
-    //CLICCKON CONTINUE SHOPPING BUTTON
     public void clickContinueShoppingButton() {
         browserActions.click(CONTINUE_SHOPPING_BUTTON);
     }
 
 
-
-
     public String getCartProductQuantity() {
         return browserActions.getText(cartProductQuantity);
+    }
+
+    public void VerifyProductDetails(){
+       assertion.assertElementIsDisplayed(productDetails);
     }
 }
