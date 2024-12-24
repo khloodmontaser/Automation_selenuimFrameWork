@@ -27,7 +27,6 @@ public class ProductsPageActions extends ProductsPageElements {
     }
 
 
-
     /*public void clickBrandsPoloButton() {
         browserActions.click(BRANDS_POLO);
     }
@@ -39,6 +38,7 @@ public class ProductsPageActions extends ProductsPageElements {
     // dynamic for brands
 
     public void clickBrand(String brandName) {
+        browserActions.scrollTillElement(BRANDS_PRODUCT);
         browserActions.click(getBrandLocator(brandName));
     }
 }
