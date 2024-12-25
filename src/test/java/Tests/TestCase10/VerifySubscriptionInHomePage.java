@@ -1,4 +1,4 @@
-package Tests.TestCase9;
+package Tests.TestCase10;
 
 import Config.Config;
 import PageObjects.HomePage.HomePageActions;
@@ -6,11 +6,12 @@ import PageObjects.NavBar.NavBarActions;
 import PageObjects.ProductsPage.ProductsPageActions;
 import PageObjects.SignUpLogin.SingUPLoginActions;
 import Tests.TestBase;
+import Utilities.Utilities;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-public class SearchProduct extends TestBase {
 
+public class VerifySubscriptionInHomePage extends TestBase {
     SingUPLoginActions singUPLoginActions;
     HomePageActions homePageActions;
     NavBarActions navBarActions;
@@ -30,15 +31,21 @@ public class SearchProduct extends TestBase {
         homePageActions.navigateToHomePage(url);
     }
 
+    /*
+    7. Verify success message 'You have been successfully subscribed!' is visible
+*/
     @Test
-    public void SearchProduct() {
+    public void verifySubscription(){
+        String mail = Utilities.generateRandomString(5)+ "@gmail.com";
         navigateToUrl();
         homePageActions.validateHomePageTitleIsDisplayed();
-        navBarActions.clickProductButton();
-        productsPageActions.validateProductTitleIsDisplayed();
+        homePageActions.ScrollToFooter();
+        homePageActions.ValidateSubscriptionTitleDisplayed();
+        homePageActions.MailforSubscriotion(mail);
+        homePageActions.ClickArrowSubscription();
+        homePageActions.IsSubscriptionMsgDisplayed();
 
-        productsPageActions.SearchProduct("Winter Top");
-        productsPageActions.ClickSearch();
-        productsPageActions.ValidateSearchTitle();
+
+
     }
 }

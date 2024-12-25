@@ -30,6 +30,17 @@ public class HomePageActions extends HomePageElements {
     public void ValidateSubscriptionTitleDisplayed(){
         assertion.assertElementIsDisplayed(subscribtion);
     }
+    public void MailforSubscriotion(String mail){
+        browserActions.type(SubscriotionMail, mail);
+    }
+
+    public void ClickArrowSubscription(){
+        browserActions.click(SubscriptionArrow);
+    }
+    public void IsSubscriptionMsgDisplayed(){
+        assertion.assertElementIsDisplayed(SubscriptionMsg);
+    }
+
     public void ClickArrowUpwards(){
         browserActions.click(ArrowUpward);
     }
