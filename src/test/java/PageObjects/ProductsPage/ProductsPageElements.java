@@ -17,6 +17,7 @@ public class ProductsPageElements {
     By Search_Bar = By.xpath("//*[@id='search_product']");
     By Search_icon = By.xpath("//button[@id='submit_search']");
     By Search_title = By.xpath("//h2[text()='Searched Products']");
+    By searched_products = By.xpath("/html/body/section[2]/div[1]/div/div[2]/div/h2");
     //xpathes of the brands
    /* By BRANDS_POLO = By.xpath("//a[@href='/brand_products/Polo']");
     By BRAND_HandM= By.xpath("//a[@href='/brand_products/H&M']");

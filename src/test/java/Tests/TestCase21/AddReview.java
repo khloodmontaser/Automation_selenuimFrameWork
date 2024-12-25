@@ -1,17 +1,23 @@
 package Tests.TestCase21;
 
+import BrowserActions.BrowserActions;
 import Config.Config;
 import PageObjects.AddReview.AddReviewActions;
 import PageObjects.HomePage.HomePageActions;
 import PageObjects.NavBar.NavBarActions;
+import PageObjects.VerifyProductquantityinCart.VerifyProductActions;
 import Tests.TestBase;
 import Utilities.Utilities;
+import org.openqa.selenium.By;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 public class AddReview extends TestBase{
     HomePageActions homePageActions;
     AddReviewActions addreviewactions;
+    VerifyProductActions verifyProductActions;
+    BrowserActions browserActions;
+
     NavBarActions navBarActions;
     String url = Config.getProperty("URL");
 
@@ -20,6 +26,9 @@ public class AddReview extends TestBase{
         homePageActions = new HomePageActions(driver);
         navBarActions = new NavBarActions(driver);
         addreviewactions = new AddReviewActions(driver);
+        browserActions = new BrowserActions(driver);
+
+        verifyProductActions = new VerifyProductActions(driver);
 
     }
     public void NavigateToUrl() {homePageActions.navigateToHomePage(url);}
@@ -33,8 +42,11 @@ public class AddReview extends TestBase{
         String review = Utilities.generateRandomString(100);
 
         navBarActions.clickProductButton();
-        addreviewactions.validateAllProductsHeaderIsDisplayed();
-        addreviewactions.clickViewProductButton();
+
+        browserActions.scrollTillElement(By.xpath("/html/body/section[2]/div[1]/div/div[2]/div[1]/div[2]/div/div[1]/div[2]"));
+
+        verifyProductActions.clickViewProduct();
+
         addreviewactions.validateWriteYourReviewTitleIsDisplayed();
         addreviewactions.enterUserNameInput(userName);
         addreviewactions.UserEmailInput(email);

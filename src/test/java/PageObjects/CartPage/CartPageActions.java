@@ -2,6 +2,7 @@ package PageObjects.CartPage;
 
 import Assertions.Assertion;
 import BrowserActions.BrowserActions;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 //import java.util.ArrayList;
@@ -22,6 +23,22 @@ public class CartPageActions extends CartPageElements{
 
 
     //validate cart page is displayed
+    public void ScrollingDownCartPage(){
+        browserActions.scrollTillElement(FOOTER);
+    }
+    public void SubscriptionTextDisplayed(){
+        assertion.assertElementIsDisplayed(SUBSCRIPTION_Text);
+    }
+    public void MailforSubscriotion(String mail){
+        browserActions.type(SubscriotionMail, mail);
+    }
+
+    public void ClickArrowSubscription(){
+        browserActions.click(SubscriptionArrow);
+    }
+    public void IsSubscriptionMsgDisplayed(){
+        assertion.assertElementIsDisplayed(SubscriptionMsg);
+    }
 
     public void validateCarPageIsDisplayed() {
         assertion.assertElementIsDisplayed(CART_INFO);
@@ -79,6 +96,9 @@ public class CartPageActions extends CartPageElements{
         browserActions.click(REGISTER_LOGIN_BUTTON);
     }
 
+    public void ItemsAreDisplayed(){
+        assertion.assertElementIsDisplayed(By.xpath("//*[@id=\"cart_info\"]"));
+    }
 
 
 

@@ -33,6 +33,9 @@ public class ProductsPageActions extends ProductsPageElements {
         assertion.assertElementIsDisplayed(Search_title);
     }
     public void ClickSearch(){browserActions.click(Search_icon);}
+    public void IsSearchedProductDisplayed(){
+        assertion.assertElementIsDisplayed(searched_products);
+    }
 
 
     /*public void clickBrandsPoloButton() {
