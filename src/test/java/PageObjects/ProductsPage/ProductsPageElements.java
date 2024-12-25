@@ -6,7 +6,7 @@ import org.openqa.selenium.By;
 public class ProductsPageElements {
 
     // Title of products page
-    By TITLE_TYPE_PRODUCT = By.xpath("//h2[@class='title text-center']");
+    By Product_Title = By.xpath("//h2[@class='title text-center']");
 
     //ITEMS on products
     By ITEM_PRODUCT = By.xpath("//div[@class='features_items']");
@@ -14,7 +14,9 @@ public class ProductsPageElements {
     //brands in left sidebar
     By BRANDS_TITLE = By.xpath("/html/body/section[2]/div[1]/div/div[1]/div[1]/div[3]/h2");
     By BRANDS_PRODUCT = By.xpath("//div[@class='brands_products']");
-
+    By Search_Bar = By.xpath("//*[@id='search_product']");
+    By Search_icon = By.xpath("//button[@id='submit_search']");
+    By Search_title = By.xpath("//h2[text()='Searched Products']");
     //xpathes of the brands
    /* By BRANDS_POLO = By.xpath("//a[@href='/brand_products/Polo']");
     By BRAND_HandM= By.xpath("//a[@href='/brand_products/H&M']");

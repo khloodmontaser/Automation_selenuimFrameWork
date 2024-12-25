@@ -15,7 +15,7 @@ public class ProductsPageActions extends ProductsPageElements {
     }
 
     public void validateProductTitleIsDisplayed() {
-        assertion.assertElementIsDisplayed(TITLE_TYPE_PRODUCT);
+        assertion.assertElementIsDisplayed(Product_Title);
     }
 
     public void validateItemsIsDisplayed() {
@@ -25,6 +25,14 @@ public class ProductsPageActions extends ProductsPageElements {
     public void validateBrandsIsDisplayed() {
         assertion.assertElementIsDisplayed(BRANDS_TITLE);
     }
+    public void SearchProduct(String productName){
+        browserActions.scrollTillElement(Search_Bar);
+        browserActions.type(Search_Bar, productName);
+    }
+    public void ValidateSearchTitle(){
+        assertion.assertElementIsDisplayed(Search_title);
+    }
+    public void ClickSearch(){browserActions.click(Search_icon);}
 
 
     /*public void clickBrandsPoloButton() {
