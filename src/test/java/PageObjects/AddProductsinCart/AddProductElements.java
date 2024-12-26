@@ -9,7 +9,7 @@ public class AddProductElements {
 
     // Locators for first product
     By FirstProduct = By.xpath("//a[@data-product-id='1']");
-    By addToCartFirstProduct  = By.xpath("/html/body/section[2]/div[1]/div/div[2]/div/div[2]/div/div[1]/div[1]/a");
+    By addToCartFirstProduct  = By.xpath("/html/body/section[2]/div[1]/div/div[2]/div/div[2]/div/div[1]/div[2]/div/a");
 
 
     // Locators for second product

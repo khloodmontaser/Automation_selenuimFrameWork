@@ -20,9 +20,9 @@ public class AddProductActions extends AddProductElements{
     public void navigateToUrl(String url){
         browserActions.navigateToURl(url);
     }
-    public boolean isHomePageVisible() {
-        return browserActions.waitUntilElementIsReady(homePageVisibleElement).isDisplayed();
-    }
+//    public boolean isHomePageVisible() {
+//        return browserActions.waitUntilElementIsReady(homePageVisibleElement).isDisplayed();
+//    }
 
     public void clickProductsButton() {
         browserActions.click(productsButton);

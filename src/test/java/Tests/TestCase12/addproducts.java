@@ -28,13 +28,12 @@ public class addproducts extends TestBase {
     }
     @Test
     public void addProductsToCartAndVerify() {
-        // Step 1: Launch browser and navigate to URL
         addProductActions.navigateToUrl(url);
+
         // Step 2: Verify that home page is visible
         homePageActions.validateHomePageTitleIsDisplayed();
         // Step 3: Click 'Products' button
         navBarActions.clickProductButton();
-
 
         // Step 4: Hover over first product and click 'Add to cart'
         addProductActions.AddFirstProductToCart();
