@@ -12,6 +12,8 @@ public class PaymentPageElements {
         By EXPIRY_YEAR=By.xpath("//input[@data-qa='expiry-year']");
         By PAYANDCONFIRM_BUTTON=By.xpath("//button[@id='submit']");
         By SUCCESS_MESSAGE=By.xpath("//*[@id=\"success_message\"]/div");
+        By downloadInvoiceButton = By.xpath("/html/body/section/div/div/div/a");
+
 
 
 

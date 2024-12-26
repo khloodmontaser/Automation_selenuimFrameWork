@@ -56,6 +56,11 @@ public class PaymentPageActions extends PaymentPageElements {
     public void validateSuccessMessageIsDisplayed() {
         assertion.assertElementIsDisplayed(SUCCESS_MESSAGE);
 
+    }
+
+    public void clickDownloadInvoice()  {
+
+        browserActions.click(downloadInvoiceButton);
 
     }
 

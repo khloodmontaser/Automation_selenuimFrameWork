@@ -1,44 +1,18 @@
-/*
-
-    1. Launch browser
-    2. Navigate to url 'http://automationexercise.com'
-    3. Verify that home page is visible successfully
-
-
-    4. Add products to cart
-    5. Click 'Cart' button
-    6. Verify that cart page is displayed
-    7. Click Proceed To Checkout
-    8. Click 'Register / Login' button
-    9. Fill all details in Signup and create account
-    10. Verify 'ACCOUNT CREATED!' and click 'Continue' button
-    11. Verify ' Logged in as username' at top
-    12.Click 'Cart' button
-    13. Click 'Proceed To Checkout' button
-    14. Verify Address Details and Review Your Order
-    15. Enter description in comment text area and click 'Place Order'
-    16. Enter payment details: Name on Card, Card Number, CVC, Expiration date
-    17. Click 'Pay and Confirm Order' button
-    18. Verify success message 'Your order has been placed successfully!'
-    19. Click 'Download Invoice' button and verify invoice is downloaded successfully.
-    20. Click 'Continue' button
-    21. Click 'Delete Account' button
-    22. Verify 'ACCOUNT DELETED!' and click 'Continue' button
-
-*/
-
 package Tests.TestCase24;
 
+import BrowserActions.BrowserActions;
 import Config.Config;
 import PageObjects.AddProductsinCart.AddProductActions;
 import PageObjects.CartPage.CartPageActions;
+import PageObjects.DeleteAccountPage.DeleteAccountActions;
 import PageObjects.HomePage.HomePageActions;
 import PageObjects.NavBar.NavBarActions;
-import PageObjects.OrderPage.OrderPageActions;
+import PageObjects.PaymentPage.PaymentPageActions;
 import PageObjects.SignUpLogin.SingUPLoginActions;
 import PageObjects.TestCase.TestCasesActions;
 import Tests.TestBase;
 import Utilities.Utilities;
+import org.openqa.selenium.By;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -50,7 +24,11 @@ public class DownloadInvoice  extends TestBase {
     NavBarActions navbarActions;
     CartPageActions cartPageActions;
     SingUPLoginActions signUpLoginActions;
-    OrderPageActions orderPageActions;
+    BrowserActions browserActions;
+    PaymentPageActions paymentPageActions;
+    DeleteAccountActions deleteAccountActions;
+
+
 
     String userName = Utilities.generateRandomString(7);
     String email = Utilities.generateRandomString(7) + "@gmail.com";
@@ -63,25 +41,29 @@ public class DownloadInvoice  extends TestBase {
     String city = Utilities.generateRandomString(7);
     String zip = Utilities.generateRandomString(4);
     String number = Utilities.generateRandomString(9);
+    String cardName = Utilities.generateRandomString(8);
 
 
     @BeforeMethod
     public void setupTest() {
+        browserActions = new BrowserActions(driver);
         homePageActions = new HomePageActions(driver);
         testCasesActions = new TestCasesActions(driver);
         addProductActions = new AddProductActions(driver);
         navbarActions =new NavBarActions(driver);
         cartPageActions = new CartPageActions(driver);
         signUpLoginActions = new SingUPLoginActions(driver);
-        orderPageActions = new OrderPageActions(driver);
+        paymentPageActions = new PaymentPageActions(driver);
+        deleteAccountActions = new DeleteAccountActions(driver);
+
+
         driver.manage().window().maximize();
     }
     public void navigateToUrl() {
         homePageActions.navigateToHomePage(url);
     }
     @Test
-    public void downloadInvoiceTest()
-    {
+    public void downloadInvoiceTest() throws InterruptedException {
         //  Navigate to the URL
         navigateToUrl();
 
@@ -90,17 +72,20 @@ public class DownloadInvoice  extends TestBase {
         //  Click 'Products' button
         addProductActions.clickProductsButton();
         //  Hover over first product and click 'Add to cart'
+        browserActions.scrollTillElement(By.xpath("/html/body/section[2]/div[1]/div/div[2]/div"));
+
         addProductActions.AddFirstProductToCart();
         //  Click 'Continue Shopping'
         addProductActions.clickContinueShopping();
-        /*                                                        PROBLEM HERE                  */
+
         navbarActions.clickCartButton();
         // Verify that cart page is displayed
         cartPageActions.validateCarPageIsDisplayed();
         // Click Proceed To Checkout
         cartPageActions.clickProceedToCheckoutButton();
+        cartPageActions.clickRegisterLoginButton();
         // Click 'Register / Login' button
-        signUpLoginActions.clickSignUpButton();
+       // signUpLoginActions.clickSignUpButton();
         // Fill all details in Signup and create account
         signUpLoginActions.enterSignUPNameInput(userName);
         signUpLoginActions.enterSignUPEmailInput(email);
@@ -131,20 +116,26 @@ public class DownloadInvoice  extends TestBase {
         cartPageActions.clickProceedToCheckoutButton();
 
         // Place Order
-        orderPageActions.enterOrderComment("Please deliver as soon as possible.");
-        orderPageActions.clickPlaceOrder();
-/*
+        browserActions.scrollTillElement(By.xpath("/html/body/section/div/div[7]"));
 
-look again
-*/
-//        cartPageActions.enterPaymentDetails("khloodddd Aaaaaaaa", "1234567812345678", "123", "12", "2025");
-//        cartPageActions.clickPayAndConfirmOrder();
-//        cartPageActions.verifySuccessMessage();
-//        cartPageActions.clickDownloadInvoice();
-//        cartPageActions.clickContinue();
-//        cartPageActions.clickDeleteAccount();
-//
-//        cartPageActions.clickContinue();
+        cartPageActions.enterComment("hurry ");
+        cartPageActions.clickPlaceOrderButton();
+
+        paymentPageActions.enterCardName(cardName);
+        paymentPageActions.enterCardNumber("5659586");
+        paymentPageActions.enterCVC("123");
+        paymentPageActions.enterMonth("10");
+        paymentPageActions.enterYear("2026");
+        paymentPageActions.clickPayAndConfirmButton();
+        paymentPageActions.clickDownloadInvoice();
+
+        navbarActions.clickDeleteAccountButton();
+
+        deleteAccountActions.validateAccountDeletedMessageIsDisplayed();
+        deleteAccountActions.clickContinueButton();
+
+
+
 
     }
 
