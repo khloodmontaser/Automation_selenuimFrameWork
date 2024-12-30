@@ -5,6 +5,16 @@ import org.openqa.selenium.By;
 
 public class ProductsPageElements {
 
+    //first product:
+    By First_product = By.xpath("/html/body/section[2]/div[1]/div/div[2]/div/div[2]/div/div[1]/div[2]/div/a");
+    By Continue_shopping = By.xpath("/html/body/section[2]/div[1]/div/div[2]/div/div[1]/div/div/div[3]/button");
+
+    By Second_product = By.xpath("/html/body/section[2]/div[1]/div/div[2]/div/div[3]/div/div[1]/div[2]/div/a");
+    By FirstProductAdded = By.xpath("//*[@id=\"product-1\"]");
+    By SecondProductAdded = By.xpath("//*[@id=\"product-2\"]");
+
+
+
     // Title of products page
     By Product_Title = By.xpath("//h2[@class='title text-center']");
 

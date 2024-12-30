@@ -83,8 +83,6 @@ public class CartPageActions extends CartPageElements{
     }
 
 
-
-
     //enter text in the comment box
     public void enterComment(String comment) {
         browserActions.type(COMMENT_BOX, comment);

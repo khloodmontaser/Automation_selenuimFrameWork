@@ -36,6 +36,22 @@ public class ProductsPageActions extends ProductsPageElements {
     public void IsSearchedProductDisplayed(){
         assertion.assertElementIsDisplayed(searched_products);
     }
+    public void addFirstProduct(){
+        browserActions.scrollTillElement(First_product);
+        browserActions.click(First_product);
+    }
+    public void addSecondProduct(){
+        browserActions.scrollTillElement(Second_product);
+        browserActions.click(Second_product);
+    }
+    public void ClickcontinueShopping(){
+        browserActions.click(Continue_shopping);
+    }
+
+    public void Verify_First_Second_Added(){
+        assertion.assertElementIsDisplayed(FirstProductAdded);
+        assertion.assertElementIsDisplayed(SecondProductAdded);
+    }
 
 
     /*public void clickBrandsPoloButton() {
