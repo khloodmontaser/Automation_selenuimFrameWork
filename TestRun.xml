@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite" parallel="methods" thread-count="1">
+    <test name="Test">
+        <classes>
+            <class name="Tests.TestCase1.RegisterUser"/>
+            <class name="Tests.TestCase2.loginWithValidCredentials"/>
+            <class name="Tests.TestCase3.LoginWithInvalidCredentials"/>
+            <class name="Tests.TestCase4.LogoutUser"/>
+            <class name="Tests.TestCase5.RegisterWithExistingEmail"/>
+            <class name="Tests.TestCase6.ContactUs"/>
+            <class name="Tests.TestCase7.VerifyTestCasesPage"/>
+            <class name="Tests.TestCase8.All_ProductsAnd_product_detail_page"/>
+            <class name="Tests.TestCase9.SearchProduct"/>
+            <class name="Tests.TestCase10.VerifySubscriptionInHomePage"/>
+            <class name="Tests.TestCase11.verifySubscriptionCartPage"/>
+            <class name="Tests.TestCase12.addproducts"/>
+            <class name="Tests.TestCase13.verifyProducts"/>
+            <class name="Tests.TestCase14.PlaceOrderRegisterWhileCheckout"/>
+            <class name="Tests.TestCase15.PlaceOrderRegisterBeforeCheckout"/>
+            <class name="Tests.TestCase16.PlaceOrderLoginbeforeCheckout"/>
+            <class name="Tests.TestCase17.RemoveProductsTest"/>
+            <class name="Tests.TestCase18.ViewCategory"/>
+            <class name="Tests.TestCase19.ViewCartBrandProductsTest"/>
+            <class name="Tests.TestCase20.SearchProducts_VerifyCart_AfterLogin"/>
+            <class name="Tests.TestCase21.AddReview"/>
+            <class name="Tests.TestCase22.AddCartFromRecommendedItems"/>
+            <class name="Tests.TestCase23.VerifyAddressDetailsCheckoutPage"/>
+            <class name="Tests.TestCase24.DownloadInvoice"/>
+            <class name="Tests.TestCase25.ScrollUpAndDownusingArrowbutton"/>
+            <class name="Tests.TestCase26.VerifyScrollUpAndDownNoArrow"/>
+
+
+
+
+
+
+        </classes>
+    </test>
+</suite>
